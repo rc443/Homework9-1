@@ -47,7 +47,18 @@ switch ($action) {
         /*************************************************
          * validate and process the phone number
          ************************************************/
-        // 1. make sure the user enters at least seven digits, not including formatting characters
+       If (strlen($phone) < 7) {
+       		$part1 = substr($phone, 0, 3);
+		$part2 = substr($phone, 3);
+		$phone = $part1 . '-'. $part2;
+	} else {
+		$part1 = substr($phone, 0, 3);
+		$part2 = substr($phone, 3, 3);
+		$part3 = substr($phone, 6);
+		$phone = $part1 . '-' . $part2 . '-' . $part3;
+	}
+	
+	// 1. make sure the user enters at least seven digits, not including formatting characters
         // 2. format the phone number like this 123-4567 or this 123-456-7890
 
         /*************************************************
