@@ -57,16 +57,15 @@ switch ($action) {
 		$part3 = substr($phone, 6);
 		$phone = $part1 . '-' . $part2 . '-' . $part3;
 	}
-	
-	// 1. make sure the user enters at least seven digits, not including formatting characters
-        // 2. format the phone number like this 123-4567 or this 123-456-7890
-
         /*************************************************
          * Display the validation message
          ************************************************/
-        $message = "This page is under construction.\n" .
-                   "Please write the code that process the data.";
-
+        $message = 
+		"Hello $first_name, \n\n" .
+		"Thank you for entering this data:\n\n" .
+		"Name: $name\n" .
+		"Email: $email\n" .
+		"Phone: $phone\n";
         break;
 }
 include 'string_tester.php';
