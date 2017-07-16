@@ -69,12 +69,8 @@ switch ($action) {
         /*************************************************
          * Display the validation message
          ************************************************/
-        $message = 
-		"Hello $first_name, \n\n" .
-		"Thank you for entering this data:\n\n" .
-		"Name: $name\n" .
-		"Email: $email\n" .
-		"Phone: $phone\n";
+        $message ="Hello $first_name, \n\n" . "Thank you for entering this data:\n\n" . "Name: $name\n" . "Email: $email\n" . "Phone: $phone\n";
+
         break;
 }
 include 'string_tester.php';
