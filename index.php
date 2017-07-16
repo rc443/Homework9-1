@@ -51,6 +51,11 @@ switch ($action) {
         /*************************************************
          * validate and process the phone number
          ************************************************/
+      If (strlen($phone) == 7 {
+      	$message = 'The phone number must contain at least seven digits.';
+	break;
+	}
+       
        If (strlen($phone) < 7) {
        		$part1 = substr($phone, 0, 3);
 		$part2 = substr($phone, 3);
