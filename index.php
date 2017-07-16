@@ -14,6 +14,10 @@ switch ($action) {
         $email = filter_input(INPUT_POST, 'email');
         $phone = filter_input(INPUT_POST, 'phone');
 
+	$name = trim($name);
+	$email = trim($email);
+	$phone = trim($phone);
+
         /*************************************************
          * validate and process the name
          ************************************************/
